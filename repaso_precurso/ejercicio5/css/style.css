@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@300;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'KoHo', sans-serif;
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+main {
+    border-bottom: 30px solid lightskyblue;
+    height: 100vh
+}
+
+main section {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1004px;
+    margin: 0px auto;
+    padding-top: 40px;
+}
+
+main section div {
+    width: 50%;
+}
+
+main section div:first-child img {
+    max-width: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+main section div:last-child h2, main section div:last-child p {
+    margin-bottom: 20px;
+}
+
+main section div:last-child a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: lightskyblue;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* queda pendiente responsive con imagen debajo y texto arriba - flexbox - order */
