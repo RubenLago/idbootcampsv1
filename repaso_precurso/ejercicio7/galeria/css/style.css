@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 100%;	
+}
+
+h1, h2{
+	font-family: 'Libre Baskerville', serif;
+}
+h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+}
+
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+header{
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 60px 0px 120px 0; 
+}
+
+header h2, header p{
+	color: #aaa;
+}
+
+main{
+	padding-bottom: 30px;
+}
+
+main .imagenes{
+	width: 100%;
+	margin-top: -30px;
+}
+
+main .imagenes div{
+	float: left;
+	width: 50%;
+	margin-bottom: -5px;
+	position: relative;
+	overflow: hidden;
+}
+
+
+main .imagenes div .velo{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height:100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	transition: 1s;
+}
+
+main .imagenes div:hover .velo{
+	opacity: 1;
+}
+main .imagenes div .velo h4, main .imagenes div .velo h3{
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 45%;
+}
+
+main .imagenes div .velo h4{
+	left: -500px;
+	transition: 1s;
+}
+
+main .imagenes div .velo h3{
+	left: 500px;
+	transition: 1s;
+}
+
+main .imagenes div:hover .velo h4, main .imagenes div:hover .velo h3{
+	left:0;
+}
+
+main .imagenes div img{
+	transition: 2s;
+}
+
+main .imagenes div:hover img{
+	transform: rotate(10deg) scale(1.25);
+}
+
+footer{
+	background-color: black;
+	color: white;
+	padding: 10px 0px; 
+}
+
+.row{
+	max-width: 1170px;
+	margin: 0 auto; 
+}
+
+.row:after{
+	content:"";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+
+@media(max-width: 500px) {
+
+	main .imagenes{
+		width: 95%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	main .imagenes div{
+		width: 100%;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
