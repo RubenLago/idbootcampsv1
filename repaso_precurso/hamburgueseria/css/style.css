@@ -188,6 +188,134 @@ header nav .menu a:hover, header nav .menu .activo {
 
 /* final hero */
 
+/* inicio main */
+
+main section {
+    padding: 2.25em 1em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuentesecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+main section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: bold;
+    color: var(--colorprincipal);
+    text-align: center;
+    margin-bottom: var(--margingrid);
+}
+
+main section .underline hr {
+    position: absolute;
+    width: 100%;
+    top: 7px;
+    border-color: var(--colorprincipal)
+}
+
+main section .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section .flex article {
+    width: 100%;
+    margin: calc(2 * var(--margingrid)) 0 0 0;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: calc(2 * var(--margingrid));
+}
+
+main section .flex article div i {
+    border: 1px solid var(--colorprincipal);
+    color: var(--colorprincipal);
+    padding: 0.5em;
+    font-size: 150%;
+}
+
+main section p {
+    color: #777;
+}
+
+main section article h3 {
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 110%;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    margin-top: 0.5em;
+    display: inline-block;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+main #aboutus .columna {
+    width: 100%;
+    padding: 0.5em;
+}
+
+main #aboutus h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main #aboutus h4 {
+    color: var(--colorprincipal);
+    margin: var(--margingrid) 0;
+}
+
+main #aboutus figure {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main #aboutus figure .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main #aboutus figure .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
+    transform: rotateZ(0deg);
+}
+
+/* final main */
+
+@media(min-width: 600px) {
+    main section .flex article {
+        border-left: 1px solid #aaa;
+        border-bottom: 0px;
+        padding-bottom: 0;
+        padding: 0 var(--margingrid);
+        width: calc(50% - (2*var(--margingrid)));
+    }
+    main section .flex article:last-child {
+        width: 100%;
+    }
+    main #aboutus .columna {
+        width: 50%;
+    }
+}
+
 @media(min-width: 768px) {
     header .nav-top a span {
         display: inline;
@@ -197,6 +325,9 @@ header nav .menu a:hover, header nav .menu .activo {
     }
     header .nav-top .container {
         justify-content: space-between;
+    }
+    main section .flex article, main section .flex article:last-child {
+        width: calc(33.333% - (2*var(--margingrid)));
     }
 }
 
