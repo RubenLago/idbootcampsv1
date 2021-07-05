@@ -58,3 +58,21 @@ main section div:last-child a {
 }
 
 /* queda pendiente responsive con imagen debajo y texto arriba - flexbox - order */
+
+@media(max-width: 500px) {
+    main section div {
+        width: 100%;
+    }
+    main {
+        height: 100%;
+    }
+    main section {
+        margin-bottom: 20px;
+    }
+    main section div:first-child {
+        order: 2;
+    }
+    main section div:last-child {
+        order: 1;
+    }
+}
