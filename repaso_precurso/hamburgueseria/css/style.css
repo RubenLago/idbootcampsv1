@@ -9,7 +9,7 @@ color secundario: #21242e
 
 :root {
     --fuenteprincipal: 'Montserrat', sans-serif;
-    --fuentesecundaria: font-family: 'Handlee', cursive;
+    --fuentesecundaria: 'Handlee', cursive;
     --colorprincipal: #fa573a;
     --colorsecundario: #21242e;
     --fontsize: 1em;
@@ -116,6 +116,77 @@ header nav .menu a:hover, header nav .menu .activo {
 }
 
 /* final header */
+
+/* inicio hero */
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    background-color: #777;
+    background-blend-mode: multiply;
+    display: flex;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+}
+
+.hero h1 {
+    font-family: var(--fuentesecundaria);
+    font-size: 2.25em;
+    color: white;
+}
+
+.hero h2 {
+    color: var(--colorprincipal);
+    font-size: 1.25em;
+    margin: var(--margingrid) 0;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.15em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    padding: 1.15em;
+    margin: var(--margingrid) 0;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--colorprincipal);
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--colorprincipal);
+}
+
+.boton:hover i {
+    transition: 0.5s;
+    transform: translateX(5px) scale(1.20);
+}
+
+.hero .social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: calc(2 * var(--fontsize));
+}
+
+/* final hero */
 
 @media(min-width: 768px) {
     header .nav-top a span {
