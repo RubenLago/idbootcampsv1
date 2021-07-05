@@ -44,6 +44,32 @@ body {
 
 /* inicio header */
 
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 20px 10px;
+}
 
+header .nav-top a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+}
+
+header .nav-top a span {
+    display: none;
+    color: white;
+}
+
+header .nav-top a i {
+    font-size: 140%;
+}
+
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
 
 /* final header */
+
+@media(min-width: 768px) {
+    
+}
