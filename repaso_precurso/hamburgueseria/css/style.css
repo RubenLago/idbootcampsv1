@@ -300,6 +300,38 @@ main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
 
 /* final main */
 
+/* inicio footer */
+
+footer {
+    background-color: var(--colorsecundario);
+    color: white;
+    padding: var(--margingrid) 0px;
+    text-align: center;
+    margin-top: calc(2*var(--margingrid));
+}
+
+footer a {
+    color: var(--colorprincipal);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.arriba {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    font-size: 2em;
+}
+
+.arriba a {
+    color: var(--colorprincipal);
+}
+
+/* final footer */
+
 @media(min-width: 600px) {
     main section .flex article {
         border-left: 1px solid #aaa;
@@ -328,6 +360,9 @@ main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
     }
     main section .flex article, main section .flex article:last-child {
         width: calc(33.333% - (2*var(--margingrid)));
+    }
+    footer {
+        text-align: left;
     }
 }
 
