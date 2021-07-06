@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de datos</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var nombre = "Juan";
+        var apellido = "Pérez";
+        var edad = 39;
+
+        var nombreCompleto; //undefined
+
+        nombreCompleto = nombre + " " + apellido //string Juan Pérez
+
+        console.log(nombreCompleto)
+
+        //cuando quiero pintar el resultado en html -> DOM hasta entonces usaremos la funcion document.write()
+
+        //concatenación de textos
+        var contenidoHtml = '<h1> ' + nombreCompleto + ' : ' + edad + '</h1>';
+        document.write(contenidoHtml);
+
+
+        //template literals
+
+        var contenidoHtml2 = `<h2>
+                                ${nombreCompleto} : ${edad}
+                            </h2>`
+        document.write(contenidoHtml2);
+
+        //operar matematicamente
+
+        var numero1 = 5;
+        var numero2 = 6;
+        var suma = numero1 + numero2;
+
+        var resultado = '<h4>El resultado de sumar ' + numero1 + ' + ' + numero2 + ' es ' + suma + '</h4>';
+
+        document.write(resultado);
+        console.log(resultado);
+
+
+        //operar matematicamente template literals
+
+        var numeroA = 3;
+        var numeroB = 7;
+
+        var multiplicacion = `<h4>El resultado de multiplicar ${numeroA} x ${numeroB} es ${numeroA * numeroB}</h4>`
+
+        document.write(multiplicacion);
+
+    </script>
+
+</body>
+
+</html>

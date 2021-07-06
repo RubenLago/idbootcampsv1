@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional simple</title>
+</head>
+
+<body>
+
+    <script>
+
+        //me permite tomar decisiones
+
+        var nota = parseInt(prompt('Dime tu nota'));
+
+        if (nota >= 5) {
+            alert('Aprobado');
+        }
+
+        //condicional con secuencia de escape. La secuencia de escape no deberia ser un resultado de mi programacion si no un salida a un resultado no esperado.
+
+        if (nota >= 5) {
+            alert('aprobado');
+        } else {
+            alert('suspenso');
+        }
+
+        //mas eficiente
+
+        if (nota >= 0 && nota < 5) {
+            alert('suspenso');
+        } else {
+            alert('aprobado');
+        }
+
+
+
+        //mas eficiente
+
+        if (nota >= 0 && nota < 5) {
+            alert('____suspenso');
+        }
+
+        if (nota >= 5 && nota <= 10) {
+            alert('____aprobado');
+        }
+
+    </script>
+
+</body>
+
+</html>

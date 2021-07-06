@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donde se carga javascript</title>
+    <!-- zona 1 de carga js, es al final del head, aqui se cargaran archivos que no necesiten acceder al html -->
+
+    <script>
+        alert('hola desde el head');
+    </script>
+</head>
+
+<body>
+
+    <h1>HOLA MUNDO</h1>
+
+
+
+    <!-- zona 2 de carga js, justo antes del cierre del body, aqui se cargaran archivos que necesiten acceder al html -->
+    <script>
+        alert('hola desde el final del body');
+    </script>
+    <script src="js/basico.js"></script>
+</body>
+
+</html>

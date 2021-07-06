@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 condicionales</title>
+</head>
+
+<body>
+
+    <script>
+
+        //portero de discoteca
+        //teneis que preguntar por pantalla una edad si es mayor de 18 años le damos la bienvenido y si no le echamos.
+
+        const EDAD_CORTE = 18;
+        var edad = parseInt(prompt('Dime tu edad'));
+
+        //opcion 1 condicional
+
+        if (edad < EDAD_CORTE) {
+            document.write('<h1>A tu casa</h1>');
+        } else {
+            document.write('<h1>Bienvenido</h1>');
+        }
+
+        //opcion 2 ternario
+
+        var mensaje = (edad < EDAD_CORTE) ? '<h2>Un vasito de leche y la cama</h2>' : '<h2>Bienvenido</h2>';
+
+        document.write(mensaje);
+
+    </script>
+
+</body>
+
+</html>

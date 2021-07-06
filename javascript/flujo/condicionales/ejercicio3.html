@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 3 condicionales</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+        //quiero que me pidais por pantalla ancho, alto y color y segun los datos que recibais pintar un poligono de esas caracteristicas
+
+        //quiero que mi script me permita pintar o cuadrado o un circulo
+        
+
+        var ancho = parseInt(prompt('Dime un ancho del poligono en px')); //"105" -> 105
+        var alto = parseInt(prompt('Dime un alto del poligono en px'));
+
+        var color = prompt('Dime un color en ingles');
+
+        console.log(ancho, alto);
+
+        if (!isNaN(ancho) && !isNaN(alto)) {
+            var poligono = `<div style="width:${ancho}px; height:${alto}px; background-color: ${color}; border-radius: 0%"></div>`;
+            document.write(poligono);
+        } else {
+            document.write('los datos que me has pasado no son correctos')
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

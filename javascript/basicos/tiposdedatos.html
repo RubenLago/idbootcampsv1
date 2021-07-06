@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos en javascript</title>
+</head>
+
+<body>
+
+
+    <script>
+        //comentario una sola linea
+
+        /*
+         comentario
+         multilinea 
+         */
+
+        //tipos de datos, se pueden declarar como variables o como constantes
+        //javascript tiene dos tipos de variables var y let
+
+        //undefined -> creo una varible vacia, como no tiene valor no tiene dato
+        var nombreAlumno;
+
+        //funciones de depuracion
+        alert(nombreAlumno);
+        console.log(nombreAlumno);
+
+        //string o cadena de caracteres
+
+        var apellido = "Pérez"; //string
+        var animal = 'León';
+        var enlace = '<a href="http://www.googles.es"></a>';
+
+        //saber tipo de dato de una variable typeof()
+
+        console.log('apellido', typeof (apellido))
+
+        //number o numeros
+
+        var edad = 39; //number
+        var peso = 104.35 //number
+        var latitud = -3.4453 //number
+
+        //boolean
+
+        var estado = true;
+        var apagado = false;
+        estado = false; //reasginacion de valor a una variable creada
+
+
+        //como vaciamos una variable
+
+        apellido = "" //vaciando la variable de dato pero no tipo sigue siendo string
+        console.log(apellido, typeof (apellido));
+
+        //null para vaciar de tipo y dato
+
+        apellido = null;
+        console.log(apellido, typeof (apellido));
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

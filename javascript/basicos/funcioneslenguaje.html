@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones interesantes javascript</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //funcion para pasar texto de minusculas a mayusculas. Js es case sentitive sentible a mayusculas y minusculas. toLowerCase(); 
+
+        var variable1 = 'pepe';
+        var variable2 = 'PePe';
+
+        variable1 = variable1.toLowerCase();
+        variable2 = variable2.toLowerCase();
+
+        console.log(variable1 === variable2); //true
+
+        //funcion para pasar texto a mayusculas se llama toUpperCase();
+
+        var nombre = "juan antonio";
+        var nombreMayuscula = nombre.toUpperCase();
+
+        console.log(nombreMayuscula);
+
+        //convertir un numero a entero - OJO no es un redondeo es solo quedarme con la parte entera, tambien me sirve para convertir un numero en formato texto a un numero en  formato number. parseInt() parseFloat();
+
+        var numero = 4.23456;
+        var numeroEntero = parseInt(numero); //4
+
+        var numeroString = '34.456'
+        var numero = parseFloat(numeroString); //34.456
+        console.log(numero);
+
+
+        //Objeto Math que sirve para hacer operaciones matematicas.
+        //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+        var numeroEntero2 = Math.trunc(numero) // 4
+        var numeroEntero3 = Math.ceil(numero); //5 Math.floor() redonde0 a la baja Math.round() redonde matematico.
+
+
+        //toFixed trunca a x decimales
+
+        var resultado = numero.toFixed(2) //4.23
+
+
+        //Math a parte de muchas otras cosas me permite sacar numero aleatorios
+
+        var numeroAleatorio = Math.trunc(Math.random() * 101) //numero aleatorios entre 0 y 1 sin incluir el 1
+
+        console.log(numeroAleatorio);
+
+
+        //funcion de depuracion de peticion de datos - OJO siempre me da una string.
+        var pidoNumero = prompt('Dame un numero');
+        console.log(parseFloat(pidoNumero));
+
+    </script>
+
+</body>
+
+</html>
