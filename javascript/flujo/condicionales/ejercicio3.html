@@ -17,8 +17,8 @@
         //quiero que me pidais por pantalla ancho, alto y color y segun los datos que recibais pintar un poligono de esas caracteristicas
 
         //quiero que mi script me permita pintar o cuadrado o un circulo
-        
 
+        var figura = prompt('Dame un poligono o cuadrado o circulo');
         var ancho = parseInt(prompt('Dime un ancho del poligono en px')); //"105" -> 105
         var alto = parseInt(prompt('Dime un alto del poligono en px'));
 
@@ -27,7 +27,10 @@
         console.log(ancho, alto);
 
         if (!isNaN(ancho) && !isNaN(alto)) {
-            var poligono = `<div style="width:${ancho}px; height:${alto}px; background-color: ${color}; border-radius: 0%"></div>`;
+
+            var radio = (figura === 'cuadrado') ? '0%' : '50%';
+
+            var poligono = `<div style="width:${ancho}px; height:${alto}px; background-color: ${color}; border-radius: ${radio}"></div>`;
             document.write(poligono);
         } else {
             document.write('los datos que me has pasado no son correctos')

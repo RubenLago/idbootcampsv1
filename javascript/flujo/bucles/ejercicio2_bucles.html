@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        //quiero pintar n cuadrados con el un numero  dentro de cuadrado, este numero tiene que ser aleatorio entre 1 y 100. El numero tiene que ser entero.
+
+        //quiero que los cuadrados pares sean verdes y los impares rojos.
+
+        var numeroCuadrados = parseInt(prompt('Dame un numero de cuadrados'));
+
+        for (var i = 1; i <= numeroCuadrados; i++) {
+            var numeroAleatorio = Math.trunc(Math.random() * 101);
+            var color = (numeroAleatorio % 2 === 0) ? 'green' : 'red'
+            var cuadrado = `<div class="cuadrado" style="background-color:${color}">${numeroAleatorio}</div>`;
+            document.write(cuadrado);
+        }
+
+    </script>
+
+</body>
+
+</html>
