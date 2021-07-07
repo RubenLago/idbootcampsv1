@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito funcion</title>
+</head>
+
+<body>
+
+    <script>
+        //una variables cualquiera puede ser global o local
+
+        var nombre = "Juan" //global
+        var estado = false //global
+
+        if (estado == true) {
+            console.log(nombre);
+            var edad = 28; //global
+        }
+
+        console.log(edad);
+        console.log(nombre);
+
+        function saludar() {
+            console.log('hola ' + nombre);
+            var apellido = 'Perez'; //local
+
+            return apellido
+        }
+
+
+
+        var miapellido = saludar();
+        console.log(miapellido);
+
+
+
+    </script>
+</body>
+
+</html>

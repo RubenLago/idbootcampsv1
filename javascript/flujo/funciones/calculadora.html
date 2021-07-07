@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //realizar un programa que me permita recibir dos numeros cualesquiera y me pregunte que tipo de operacion quiero realizar (suma, resta, multiplicacion, division). Posteriormente me pondra el resultado por pantalla en el html.
+
+        function calcular(pOperacion, pNumeroA, pNumeroB) {
+            let resultado = 0;
+            switch (pOperacion) {
+                case 'sumar':
+                    //sumar
+                    resultado = sumar(pNumeroA, pNumeroB);
+                    break;
+                case 'restar':
+                    //restar
+                    resultado = restar(pNumeroA, pNumeroB);
+                    break;
+                case 'multiplicar':
+                    //multiplicar
+                    resultado = multiplicar(pNumeroA, pNumeroB);
+                    break;
+                case 'dividir':
+                    //dividir
+                    resultado = dividir(pNumeroA, pNumeroB);
+                    break;
+            }
+
+            pintarResultado(resultado, pOperacion, pNumeroA, pNumeroB);
+        }
+
+        function sumar(pNumero1, pNumero2) {
+            return pNumero1 + pNumero2;
+        }
+
+        function restar(pNumero1, pNumero2) {
+            return pNumero1 - pNumero2;
+        }
+
+        function multiplicar(pNumero1, pNumero2) {
+            return pNumero1 * pNumero2;
+        }
+
+        function dividir(pNumero1, pNumero2) {
+            return pNumero1 / pNumero2;
+        }
+
+        function pintarResultado(pResultado, pOperacion, pNumero1, pNumero2) {
+            document.write(`<h1>El resultado de ${pOperacion} ${pNumero1} y ${pNumero2} es ${pResultado}</h1>`);
+        }
+
+        
+
+        calcular('sumar', 3, 4) // 7
+        calcular('multiplicar', 10, 5) //50
+
+
+    </script>
+
+</body>
+
+</html>

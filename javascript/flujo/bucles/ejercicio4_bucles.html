@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 bucles</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //tenemos que realizar un calculadora. Debemos pedir por pantalla el tipo de calculo (suma y resta) y dos numeros, si el calculo es permitido debera sacame el resultado por pantalla. Si no es permitido me sacara un mensaje de "calculo no permitido" y me volvera ha hacer las preguntas.
+
+        var estado = false;
+
+        do {
+
+            if (estado) {
+                alert('la operacion no esta permitida');
+            }
+
+            var calculo = prompt('Dime que operacion quieres hacer, suma o resta');
+            calculo = calculo.toLowerCase();
+            var numeroA = parseInt(prompt('Dime un numero'));
+            var numeroB = parseInt(prompt('Dime otro numero'));
+            estado = true;
+
+        } while ((calculo !== 'suma' && calculo !== 'resta') || (isNaN(numeroA) || isNaN(numeroB)))
+
+        var resultado = (calculo === 'suma') ? numeroA + numeroB : numeroA - numeroB;
+        document.write(`<h1>La ${calculo} de ${numeroA} y ${numeroB} es ${resultado}</h1>`)
+
+
+    </script>
+</body>
+
+</html>

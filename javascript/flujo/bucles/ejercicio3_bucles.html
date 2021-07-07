@@ -11,11 +11,25 @@
 <body>
 
 
+
     <script>
 
         //pedir un cantidad de cuadrados, pidir ancho el color
 
         //situarlos en escalera
+
+        var cantidad = parseInt(prompt('Dime un numero de cuadrados'));
+        var ancho = parseInt(prompt('Dime el ancho del cuadrado'));
+        var contador = 0;
+
+        while (contador <= cantidad - 1) {
+
+            var cuadrado = `<div style="width:${ancho}px; height:${ancho}px; background-color: tomato; margin-left: ${contador * ancho}px"></div>`;
+            contador++;
+            document.write(cuadrado);
+        }
+
+
 
 
     </script>
