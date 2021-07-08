@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Simple</title>
+</head>
+
+<body>
+
+    <script>
+        //const listaAlumnos = [];
+        const listaAlumnos = new Array('Manu', 'Ruben', 'Danny', 'Juan', 'Mario', 'Alberto', 'Nicolas');
+
+        console.log(listaAlumnos);
+
+        //longitud de un listaAlumnos
+        console.log(listaAlumnos.length);
+
+        //acceder a un elemento de la lista tengo que saber que las listas se manejan por posicion y la posicion son numeros de 0 a n-1 siendo n la length del array.
+        console.log(listaAlumnos[2]);
+
+        //vamos a pintar todo esto en una lista no numerada en html
+
+        function pintarLista(pLista) {
+            let listaHTML = '<ul>';
+            //pintar color de texto verder rojo de forma alternativa, añadir mas nombre al array y ver que funciona.
+            for (let i = 0; i < pLista.length; i++) {
+                let color = (i % 2 == 0) ? 'red' : 'green';
+                listaHTML += `<li style="color:${color}">${pLista[i]}</li>`
+            }
+
+            listaHTML += '</ul>';
+            document.write(listaHTML);
+        }
+
+        pintarLista(listaAlumnos);
+
+
+    </script>
+</body>
+
+</html>

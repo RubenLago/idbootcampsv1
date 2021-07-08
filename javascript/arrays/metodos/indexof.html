@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf - findIndex</title>
+</head>
+
+<body>
+
+    <script>
+
+        //busca un elemento dentro de un array, si lo encuentra te devuelve la posicion del elemento y si no lo encuentra te devuelve -1
+
+        const listaAnimales = new Array('perro', 'gato', 'periquito', 'aguila', 'hipopotamo');
+
+        let animal = "Periquito";
+
+        let posicion = listaAnimales.indexOf(animal.toLowerCase());
+
+        console.log(posicion);
+        console.log(listaAnimales[posicion]);
+
+        //findIndex para arrays multidimensionales de json
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Danny',
+                edad: 21
+            },
+            {
+                nombre: 'Manuel',
+                edad: 22
+            },
+            {
+                nombre: 'Ruben',
+                edad: 37
+            },
+        )
+
+        let nombreBuscar = 'juan';
+
+        //findIndex me devuelve la posicion y -1 si no lo encuentra. Tendremos que trabajar con el concepto de funcion de condicion. Callback de condición.
+
+        /* let posicionBuscada = listaAlumnos.findIndex(function (alumno) {
+            return alumno.nombre.toLowerCase() === nombreBuscar.toLowerCase();
+        }) */
+
+        let posicionBuscada = listaAlumnos.findIndex(alumno => alumno.nombre.toLowerCase() === nombreBuscar.toLowerCase());
+
+        console.log(posicionBuscada)
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concat</title>
+</head>
+
+<body>
+
+    <script>
+
+        //concat une dos o mas array.
+
+        const verduras = new Array('Lechuga', 'Pimientos', 'Guisantes');
+        const carnes = new Array('Pollo', 'Ternera');
+        const pescados = new Array('Lubina', 'Merluza');
+
+        //opcion1
+
+        const listaCompra = verduras.concat(carnes, pescados);
+        console.log(listaCompra);
+
+
+        //opcion2 
+
+        const otraLista = carnes.concat(verduras).concat(pescados);
+
+        console.log(otraLista);
+    </script>
+
+</body>
+
+</html>

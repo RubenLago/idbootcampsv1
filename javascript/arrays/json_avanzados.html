@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const alumno = {
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 39,
+            genero: 'masculino',
+            matricula: 'A12345',
+            estado: false,
+            asignaturas: ['matematicas', 'lengua', 'quimica', 'inglés'],
+            notas: [3, 7, 5.5, 1],
+            profesores: {
+                matematicas: 'Don Pepe',
+                lengua: 'Doña Rosa',
+                quimica: 'Don Albert',
+                ingles: 'Mr Hamilton'
+            },
+            datos: {
+                direccion: "Calle Martinez pollatos",
+                puerta: 5,
+                piso: 3,
+                cp: 28013
+            },
+            mostrarNotaMedia: function () {
+                let suma = 0;
+                for (let nota of this.notas) {
+                    suma += nota;
+                }
+                return suma / this.notas.length;
+
+            }
+        }
+
+        console.log(alumno.nombre); //Juan
+        console.log(alumno['genero']); //masculino
+
+        //una asginatura
+        console.log(alumno.asignaturas[1]); //lengua
+        console.log(alumno['asignaturas'][1]); //lengua
+
+        //profesor de matematicas
+
+        console.log(alumno.profesores.matematicas); //Don Pepe
+        console.log(alumno['profesores']['matematicas']); //Don Pepe
+
+        console.log(alumno.datos.direccion + " " + alumno.datos.puerta + ", CP: " + alumno.datos.cp);
+
+        console.log(alumno.mostrarNotaMedia());
+
+
+
+
+
+    </script>
+</body>
+
+</html>

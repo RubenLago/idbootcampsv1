@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>includes</title>
+</head>
+
+<body>
+
+    <script>
+
+        //me permite buscar un trozo de texto dentro otro. Me devuelve true o false.
+
+        let frase = "En un lugar de la mancha";
+        let palabra = "Mancha"
+
+        let busqueda = frase.includes(palabra.toLowerCase());
+
+        console.log(busqueda)
+
+        //aplicado a arrays simples
+
+        const listaAnimales = new Array('perro', 'gato', 'periquito');
+
+        let animal = 'Gato';
+
+        let busqueda2 = listaAnimales.includes(animal.toLowerCase());
+
+        
+
+    </script>
+
+</body>
+
+</html>

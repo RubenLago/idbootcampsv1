@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+
+<body>
+    <script>
+
+        //reverse invierte el array. Modifica el array principal
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito', 'Aguila', 'Hipopotamo');
+
+        //const listaInvertida = listaAnimales.reverse();
+
+        // console.log(listaInvertida);
+        //console.log(listaAnimales);
+
+
+        //para evitar que el array se modifique usamos un funcionalidad de javascript que se llama spreadOperator ...;
+
+        const listaInvertida = [...listaAnimales].reverse();
+
+        console.log(listaInvertida);
+        console.log(listaAnimales);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

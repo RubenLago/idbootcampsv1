@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 array</title>
+</head>
+
+<body>
+
+    <script>
+
+        //quiero que lleneis una array inicialmente vacio con 10 numeros aleatorios.
+
+        //quiero que recorrais y que saqueis por consola solo los divisible por 3
+        const listaNumeros = new Array();
+        for (let i = 0; i < 10; i++) {
+            let numero = Math.floor(Math.random() * 100);
+            listaNumeros[i] = numero;
+        }
+
+
+        /*
+         * dimeDivisiblesXtres recibe una lista y pinta los elementos divisibles por tres
+        */
+        function dimeDivisiblesXtres(pLista) {
+            for (let numero of pLista) {
+                if (numero % 3 === 0) {
+                    console.log(numero);
+                }
+            }
+        }
+
+        dimeDivisiblesXtres(listaNumeros);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

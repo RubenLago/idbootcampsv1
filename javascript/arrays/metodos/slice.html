@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //capturar uno o varios elementos de un array en la posicion que yo quiera. Si son varios elementos estos deveran ser consecutivos. recibe dos parametros el primero es la posicion incial de donde parto y el segundo la posicion final, sin incluirla.
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito', 'Aguila', 'Hipopotamo');
+
+        const animalesDomesticos = listaAnimales.slice(0, 3);
+
+        console.log(animalesDomesticos);
+        console.log(listaAnimales);
+
+        //ultimo elemento
+
+        console.log(listaAnimales.slice(listaAnimales.length - 1, listaAnimales.length))
+
+        console.log(listaAnimales.slice(-1)) // ['hipopotamo']
+
+        console.log(listaAnimales.slice(1)) //desde 1 hasta el final
+
+    </script>
+
+</body>
+
+</html>

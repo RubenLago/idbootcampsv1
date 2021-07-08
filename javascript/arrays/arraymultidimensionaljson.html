@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de alumnos</title>
+</head>
+
+<body>
+
+    <!--  <div class="producto">
+        <h2>Nombre completo del alumno</h2>
+        <ul>
+            <li>Edad: 39</li>
+            <li>Nota: 10</li>
+        </ul>
+    </div>
+    <hr> -->
+
+    <script>
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan Antonio',
+                apellido: 'Perez',
+                edad: 39,
+                notamedia: 10
+            },
+            {
+                nombre: 'Manuel',
+                apellido: 'Castillo',
+                edad: 22,
+                notamedia: 3
+            },
+            {
+                nombre: 'Danny',
+                apellido: 'Villamagua',
+                edad: 21,
+                notamedia: 4
+            },
+            {
+                nombre: 'Ruben',
+                apellido: 'Fernadez',
+                edad: 36,
+                notamedia: 6.5
+            },
+            {
+                nombre: 'Mario',
+                apellido: 'Giron',
+                edad: 38,
+                notamedia: 4.5
+            }
+            ,
+            {
+                nombre: 'Marta',
+                apellido: 'Castillo',
+                edad: 30,
+                notamedia: 4
+            }
+            ,
+            {
+                nombre: 'Asuncion',
+                apellido: 'Romero',
+                edad: 22,
+                notamedia: 0
+            }
+        )
+
+        function pintarAlumnos(pLista) {
+            for (let alumno of pLista) {
+                pintarUnAlumno(alumno);
+            }
+        }
+
+        function pintarUnAlumno(pObjectAlumno) {
+            document.write(`<div class="producto">
+                                <h2>${pObjectAlumno.nombre} ${pObjectAlumno.apellido}</h2>
+                                <ul>
+                                    <li>Edad: ${pObjectAlumno.edad}</li>
+                                    <li>Nota: ${pObjectAlumno.notamedia}</li>
+                                </ul>
+                            </div>
+                            <hr>`);
+        }
+
+        //pintarAlumnos(listaAlumnos);
+
+        //mostrar por pantalla los alumnos suspensos.
+
+        function filtrarXNota(pNotaMin, pNotaMax, pLista) {
+            const listaFiltrada = new Array();
+            let posicion = 0;
+            for (let alumno of pLista) {
+                if (alumno.notamedia >= pNotaMin && alumno.notamedia <= pNotaMax) {
+                    //Este alumno es con el quiero quedarme, lo meto en array filtrado.
+                    listaFiltrada[posicion] = alumno;
+                    posicion++;
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+        const listaResultate = filtrarXNota(0, 4.99, listaAlumnos);
+        pintarAlumnos(listaResultate);
+
+        /* function filtrarSupensos(pLista) {
+            let listaFiltrada = new Array();
+            let posicion = 0;
+            for (let alumno of pLista) {
+                if (alumno.nota < 5) {
+                    listaFiltrada[posicion] = alumno;
+                    posicion++
+                }
+            }
+
+            return listaFiltrada;
+        } */
+
+    </script>
+</body>
+
+</html>
