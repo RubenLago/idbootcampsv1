@@ -37,6 +37,36 @@
         }
 
 
+        function pintarUnaFila(pNumeroCasillas, pTamano, pColorInicial) {
+
+            let fila = '<div style="display:flex">';
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let color;
+                if (pColorInicial === 'black') {
+                    color = (i % 2 !== 0) ? pColorInicial : 'red';
+                } else {
+                    color = (i % 2 !== 0) ? pColorInicial : 'black';
+                }
+
+                fila += pintarUnaCasilla(pTamano, color)
+            }
+
+            fila += '</div>'
+            document.write(fila);
+
+        }
+
+        function pintarTablero(pNumeroCasillas, pTamanoCasilla) {
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let colorInicial = (i % 2 !== 0) ? 'black' : 'red';
+                pintarUnaFila(pNumeroCasillas, pTamanoCasilla, colorInicial);
+            }
+        }
+
+        let numeroCasillas = parseInt(prompt('Dime un numero de casillas'));
+        let tamano = parseInt(prompt('Dame un tamaño de la casilla en pixeles'));
+
+        pintarTablero(numeroCasillas, tamano);
 
 
 
