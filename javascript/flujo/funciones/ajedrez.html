@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de ajedrez</title>
+</head>
+
+<body>
+
+    <!--  <div style="display:flex">
+        <div style="background-color: red; width:100px; height: 100px;"></div>
+        <div style="background-color: black; width:100px; height: 100px;"></div>
+        <div style="background-color: red; width:100px; height: 100px;"></div>
+        <div style="background-color: black; width:100px; height: 100px;"></div>
+    </div> -->
+
+
+    <script>
+
+        //quiero que pinteis un tablero de ajedrez donde las celdas van ser grises y negras.
+
+        //me pedireis por pantalla numero casillas y tamaño de la casilla
+
+
+        //el problema se divide en tres partes
+        //1 es construir una casilla
+        //2 es construir una fila - es que la fila tiene que poder elegir el color en el que empieza
+        //3 contruir el tablero
+
+
+        function pintarUnaCasilla(pAncho, pColor) {
+            const casilla = `<div style="background-color: ${pColor}; width:${pAncho}px; height: ${pAncho}px;"></div>`;
+            return casilla;
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal de punto de venta</title>
+</head>
+
+<body>
+
+    <script>
+
+        //hacer una aplicacion que me permita calcular y sacar por pantalla el PVP de un producto.
+
+        //PVP = precio + IVA + margenBeneficio  
+
+        //aplicación debe tener en cuenta que tanto el margen como IVA pueden cambiar.
+
+        //calcularPvp(10, 21, 30)
+
+        function calcularPvp(pPrecioProveedor, pImpuesto, pBeneficio) {
+
+            const margenFinal = calcularMargen(pPrecioProducto, pMargen);
+            const precioConMargen = margenFinal + pPrecioProveedor;
+
+            //calcular el impuesto
+            const IVA = calcularIVA(precioConMargen, pImpuesto);
+            const PVP = precioConMargen + IVA;
+
+            console.log(PVP);
+            return PVP;
+
+        }
+
+        function calcularMargen(pPrecioProducto, pMargen) {
+            return (pPrecioProducto * pMargen) / 100;
+        }
+
+        function calcularIVA(pPrecio, pImpuesto) {
+            return (pPrecio * pImpuesto) / 100;
+        }
+
+        function pintarPvp(pPrecioFinal) {
+            document.write(`<h1>El precio final del producto es: ${pPrecioFinal}</h1>`);
+        }
+
+        let precioProducto = calcularPvp(10, 21, 30);
+        pintarPvp(precioProducto);
+    </script>
+
+</body>
+
+</html>

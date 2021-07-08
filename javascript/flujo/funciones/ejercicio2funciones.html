@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero realizar un funcion que me pinte resultado de operaciones. SUMAR, RESTA MULTIPLICAR
+
+        //sumar como funcion normal
+        //restar con anonima
+        //multiplica como flecha 
+
+        //la funcion de pintar resultado recibe como parametro una unica funcion y saca el resultado.
+
+        // function sumar(pNumero1, pNumero2) {
+        //     return pNumero1 + pNumero2;
+        // }
+
+        const restar = function (pNumero1, pNumero2) {
+            return pNumero1 - pNumero2;
+        }
+
+        const multiplicar = (pNumero1, pNumero2) => pNumero1 * pNumero2;
+
+        function pintarResultado(pFnCalcular) {
+            console.log(pFnCalcular(3, 4))
+        }
+
+        pintarResultado(multiplicar);
+        pintarResultado(restar);
+
+
+        pintarResultado(function sumar(pNumero1, pNumero2) {
+            return pNumero1 + pNumero2;
+        })
+
+
+    </script>
+</body>
+
+</html>

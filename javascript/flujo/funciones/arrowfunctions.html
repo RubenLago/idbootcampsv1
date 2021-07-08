@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones flecha - arrow function</title>
+</head>
+
+<body>
+
+    <script>
+
+        //la funcion flecha no es mas que una funcion anonima o declarativa. VAGANCIA. Me permite evitar hadukencode. hace mas legible mi codigo.
+
+        //como pasar un funcion anomina a flecha sin dolor.
+
+        //paso 1: quito la palabra function y la sustituyo por una flecha (=>) situada detras de los parentesis.
+
+        //paso 2: solo si la funcion recibe un unico parametro puedo quitar los parentesis del parametros.
+
+        //paso 3: si la funcion ejecuta una unica accion dentro de las llaves, puedo quitar estas. y si esa accion es un return tambien quito el return.
+
+        //funcion anomina suma - devuelve un parametro.
+
+        const sumar = function (pNumero1, pNumero2) {
+            let resultado = pNumero1 + pNumero2;
+            console.log(resultado);
+        }
+
+        const sumita = (pNumero1, pNumero2) => pNumero1 + pNumero2;
+
+        console.log(sumita(3, 4));
+
+        //funcion flecha media de dos numeros.
+
+        const media = (pNumero1, pNumero2) => {
+            let suma = pNumero1 + pNumero2;
+            let media = suma / 2;
+            return media;
+        }
+
+        const media2 = (pNumero1, pNumero2) => (pNumero1 + pNumero2) / 2;
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
